@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html ⚡>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <title>Colwagen</title>
+
+  <link rel="canonical" href="https://amp.dev/pt_br/documentation/guides-and-tutorials/start/create/basic_markup/">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden
+      }
+
+      to {
+        visibility: visible
+      }
+    }
+  </style><noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none
+      }
+    </style>
+  </noscript>
+  <!-- Scripts AMP -->
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+<!-- AMP Analytics --><script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <style amp-custom>
+    * {
+      outline: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .bg_colwagen {
+      overflow: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 1px;
+    }
+
+    /* copy css */
+    .colwagen_redes {
+      height: 140px;
+      background: #555;
+
+    }
+
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .header_link {
+      color: #fff;
+      font-size: 14px;
+      margin-left: 15px;
+      padding: 10px 0;
+      text-decoration: none;
+    }
+
+    .header_link:hover {
+      text-decoration: underline;
+    }
+
+    .background-header-white {
+      padding: 5px 0;
+      background-color: white;
+    }
+
+    .border-bottom {
+      border-bottom: 1px solid #CCC;
+    }
+
+    header.container.header {
+      background: #fff;
+    }
+
+    .header_sections__div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header_menu {
+      display: flex;
+      flex-direction: flex-end;
+    }
+
+    .header_article_logo {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header_article_logo figure {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .button_menu {
+      width: 40px;
+      border: none;
+      color: #fff;
+      background: transparent;
+      font-size: 28px;
+    }
+
+    .header__sub-menu {
+      position: absolute;
+      background: #fff;
+      top: 0px;
+      width: 100%;
+      margin: 0px;
+      padding-top: 30px;
+    }
+
+    .header__sub-menu-mobile-vw {
+      position: relative;
+      top: 6px;
+    }
+
+    .header__sub-menu-vw {
+      position: absolute;
+      background: #fff;
+      top: 0px;
+      width: 100%;
+      margin: 0px;
+      padding: 70px 0 0 0;
+    }
+
+    .header__sub-menu .item-menu {
+      padding: 5px;
+    }
+
+    .nav-item {
+      display: flex;
+      height: 40px;
+    }
+
+    .nav-item li {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .nav-items>li:nth-child(1)>.nav-link:after {
+      margin-left: 15px;
+    }
+
+    .nav-link:after {
+      content: '';
+      border-right: 1px solid white;
+      margin: 0 20px;
+    }
+
+    .amp-lightbox {
+      position: absolute;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #444;
+    }
+
+    .btn-close-vw {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: transparent;
+    }
+
+    .header__logo-img {
+      margin: 15px;
+    }
+
+    .header__logo figure {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: center;
+      flex-flow: row;
+    }
+
+    /* end copy css */
+
+    .body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .container-fluid {
+      width: 100vw;
+      height: 100vh;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      padding: 0 1rem;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .regresar a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .regresar p {
+      position: relative;
+      left: -20px;
+      font-size: 14px;
+    }
+
+    .regresar a amp-img img {
+      transform: rotateZ(90deg);
+      margin: 0;
+
+    }
+
+    .row {
+      width: 100vw;
+      height: 100vh;
+      background: url(src/imagens/Banner-colwagen.jpg)no-repeat;
+      background-size: cover;
+      background-position: center center;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row:after {
+      content: '';
+      width: 100%;
+      height: calc(100% - 140px);
+      display: block;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      z-index: 3;
+    }
+
+    .row .col-3 {
+      width: 100vw;
+      height: 100vh;
+      flex: 1 1 1;
+      padding: 1.2rem 5rem;
+      z-index: 4;
+      transition: background 1s;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .row .col-3 p {
+      text-align: justify;
+      font-size: 14px;
+      font-weight: 400;
+
+      display: none;
+    }
+
+    .row .col-3 h1 {
+      font-family: 'Open Sans', sans-serif;
+      color: #fff;
+      font-size: 3rem;
+      margin-bottom: .8rem;
+      text-transform: uppercase;
+    }
+
+    .col-3 amp-img {
+      filter: invert(1);
+    }
+
+    .row .col-3:nth-child(1):hover {
+      padding-top: 30px;
+      background: #222;
+    }
+
+    .row .col-3:nth-child(2):hover {
+      padding-top: 30px;
+      background: #F0D825;
+    }
+
+    .row .col-3:nth-child(2):hover p {
+      color: #000;
+    }
+
+    .row .col-3:nth-child(2):hover amp-img {
+      filter: invert(0);
+    }
+
+    .row .col-3:nth-child(2):hover h1 {
+      color: #000;
+    }
+
+    .row .col-3:nth-child(3):hover {
+      padding-top: 30px;
+      background: #D52C2C;
+    }
+
+    .row .col-3:hover h1 {
+      font-size: 2rem;
+    }
+
+    .row .col-3:hover p {
+      display: block;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+    }
+
+    .row .col-3:hover amp-img img {
+      transform: scale(.6);
+    }
+
+    /* CSS mobile */
+    #acordion {
+      display: none;
+    }
+
+    .row .col-3-mobile {
+      width: 100vw;
+      padding: 1.2rem 1.5rem;
+      z-index: 4;
+      height: 160px;
+      overflow: hidden;
+
+      display: flex;
+      flex: 1 1 1;
+      flex-direction: column;
+    }
+
+    .col-3-mobile h1 {
+      margin-bottom: 10px;
+    }
+
+    .row .col-3-mobile h1 strong {
+      display: block;
+      font-size: 30px;
+      letter-spacing: 3px;
+    }
+
+    .col-3-mobile h1>amp-img {
+      filter: invert(1);
+    }
+
+    .col-3-mobile p {
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 1.1px;
+      line-height: 1.3em;
+      max-height: 75vh;
+      overflow: auto;
+    }
+
+    .col-3-mobile:nth-child(2) p {
+      color: #000;
+    }
+
+    .col-3-mobile h1 {
+      background: transparent;
+      border: none;
+    }
+
+    .text {
+      display: none;
+    }
+
+    .normalPostion {
+      position: relative;
+    }
+
+    .topPosition {
+      background: #000;
+      position: absolute;
+      transition: left 1s;
+      top: 0;
+      height: calc(100vh - 140px);
+    }
+
+    .topPosition1 {
+      background: #F0D825;
+      position: absolute;
+      transition: left 1s;
+      top: 0;
+      height: calc(100vh - 140px);
+    }
+
+    .topPosition2 {
+      background: #D52C2C;
+      position: absolute;
+      transition: left 1s;
+      top: 0;
+      height: calc(100vh - 140px);
+      z-index: 999;
+    }
+
+    .col-3-mobile.topPosition,
+    .col-3-mobile.topPosition1,
+    .col-3-mobile.topPosition2 {
+      height: 100vh;
+      z-index: 99;
+      overflow: auto;
+    }
+
+    .list_icones {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+    }
+
+    .list_icones .nav-icon {
+      padding-right: 5px;
+    }
+
+    .nav-icon {
+      height: 20px;
+    }
+
+    header>div>ul>li>a {
+      color: #fff;
+      font-size: 12px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+
+    @media (max-width: 1024px) {
+      .row>.col-3 {
+        display: none;
+      }
+
+      #acordion {
+        display: block;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        z-index: 4;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .row {
+        height: calc(100vh - 140px);
+      }
+
+      .nav-link:after {
+        height: calc(100vh - 140px);
+      }
+
+      .container-fluid {
+        height: calc(100vh - 140px);
+      }
+
+      #acordion {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .col-3-mobile p {
+        text-align: justify;
+      }
+
+      .col-3-mobile.topPosition1:hover h1 {
+        color: #000;
+      }
+
+      .col-3-mobile.topPosition1:hover amp-img {
+        filter: invert(0);
+      }
+
+      .col-3-mobile:nth(1):hover {
+        background: #000;
+      }
+
+    }
+  </style>
+  <meta name="google-site-verification" content="Ma-g9okg1u1gedByf7RXrs67KN09B59iFeXtmmcS2i8" />
+</head>
+
+<body><!-- Google Tag Manager -->
+  <amp-analytics config="https://www.googletagmanager.com/amp.json?id=GTM-WWWZ5X3&gtm.url=SOURCE_URL" data-credentials="include"></amp-analytics>
+  <!-- Header desktop -->
+  <!-- Menu deskop  -->
+  <section class="bg_colwagen">
+    <section class="colwagen_redes">
+      <!-- inicio icones redes sociais -->
+      <div class="container">
+        <div class="nav-item">
+          <a class="header_link" href="somos-colwagen.html" target="_blank">#Somos<strong>Colwagen</strong></a>
+        </div>
+        <ul class=" list_icones">
+
+
+            <li class="nav-icon mr-5">
+              <a href="https://co.linkedin.com/company/colwagen" target="_blank">
+                <amp-img src="./src/icones/linkedin-button.svg" width="20" height="20"
+                  class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout"
+                  i-amphtml-layout="fixed" style="width: 20px; height: 20px; --loader-delay-offset:13ms !important;">
+                  <img decoding="async" src="./src/icones/linkedin-button.svg"
+                    class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+              </a>
+            </li>
+            <li class="nav-icon mr-5">
+              <a href="https://www.youtube.com/channel/UCLstJc6GdyPrsrI02MyOcUw/videos" target="_blank">
+                <amp-img src="./src/icones/icon-youtube.svg" width="20" height="20"
+                  class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout"
+                  i-amphtml-layout="fixed" style="width: 20px; height: 20px; --loader-delay-offset:13ms !important;">
+                  <img decoding="async" src="./src/icones/icon-youtube.svg"
+                    class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <header class="container header">
+
+        <div class=" header_sections w-100">
+          <section class="header_sections__div">
+
+            <article class="header_article_logo">
+              <figure>
+                <a href="index.html">
+                  <amp-img class="header__logo-img" src="./src/logos/Logo_colwagen.png" width="90" height="70">
+                  </amp-img>
+                </a>
+              </figure>
+              <figure class="regresar">
+                <a href="index.html">
+                  <amp-img class="header__logo-img" src="./src/icones/icon-arrow.svg" width="30" height="30">
+                  </amp-img>
+                  <p>
+                    Regresar
+                  </p>
+                </a>
+              </figure>
+            </article>
+
+          </section>
+        </div>
+
+      </header>
+      <!-- inicio icones redes sociais -->
+    </section>
+    <!-- Main application -->
+    <section class="container-fluid">
+      <div class="row">
+        <!-- Inicio Container desktop -->
+        <div class="col-3">
+          <amp-img src="src/icones/icon-compass.svg" width="80" height="80"></amp-img>
+          <h1>Misión</h1>
+          <p>
+            Ofrecer la mejor y más innovadora experiencia de movilidad a nuestros clientes a nivel internacional
+            maximizando el uso de soluciones tecnológicas, siendo pioneros e innovadores.
+          </p>
+        </div>
+
+        <div class="col-3">
+          <amp-img src="src/icones/icon-eye.svg" width="80" height="80"></amp-img>
+          <h1>Visión</h1>
+          <p>
+            Ser considerados por nuestros clientes y partners como la opción más atractiva e innovadora para ofrecer
+            soluciones de movilidad adaptadas a sus necesidades en cada momento, asumiendo el reto permanente de superar
+            siempre sus expectativas.
+            Ser el mejor lugar para trabajar, donde las personas disfruten de las mejores condiciones para sentirse
+            inspirados a dar la mejor versión de sí mismos con el ánimo de lograr desarrollar una empresa eficiente y
+            rentable que acepte y supere el desafío que supone competir y crecer internacionalmente.
+          </p>
+        </div>
+
+        <div class="col-3">
+          <amp-img src="src/icones/icon-heart2.svg" width="60" height="60"></amp-img>
+          <h1>Valores</h1>
+          <p>
+            Somos honestos con nosotros mismos. La confianza, transparencia y coherencia forman parte de nuestros
+            principios.
+            Somos conscientes que la humildad y aprender algo nuevo cada día nos proporciona nuevas oportunidades de
+            éxito.
+            Somos nuestra mejor versión en todo momento. La superación constante en busca de la excelencia es nuestra
+            guía
+            para marcarnos nuevos retos.
+            Somos positivos y proactivos. Con la agilidad necesaria para adaptarnos al cambio.
+            Somos pasión y tenemos un secreto: amamos lo que hacemos.
+            Somos un equipo y apostamos por un entorno de colaboración fomentando el talento colectivo y el trabajo en
+            equipo.
+            Somos sensatos. Asumimos con responsabilidad los compromisos y aceptamos las consecuencias de nuestros
+            actos.
+            Somos fieles a nuestra empresa y a la sociedad. La lealtad nos caracteriza.
+            Somos esfuerzo. Con constancia y perseverancia convertimos cada problema en un desafío y en una nueva
+            oportunidad.
+          </p>
+        </div>
+
+        <div id="acordion">
+          <section role="button" tabindex=""
+            on="tap:AMP.setState({ Position: Position == 'topPosition' ? 'normalPosition' : 'topPosition' })"
+            class="col-3-mobile" [class]="'col-3-mobile ' + Position">
+            <h1>
+              <amp-img src="src/icones/icon-compass.svg" width="80" height="80"></amp-img>
+              <strong>MISIÓN</strong>
+            </h1>
+            <p>
+              Ofrecer la mejor y más innovadora experiencia de movilidad a nuestros clientes a nivel internacional
+              maximizando el uso de soluciones tecnológicas, siendo pioneros e innovadores.
+            </p>
+          </section>
+
+          <section class="col-3-mobile" role="button" tabindex=""
+            on="tap:AMP.setState({ Position1: Position1 == 'topPosition1' ? 'normalPostion' : 'topPosition1' })"
+            class="col-3-mobile" [class]="'col-3-mobile ' + Position1">
+            <h1>
+              <amp-img src="src/icones/icon-eye.svg" width="100" height="100"></amp-img>
+              <strong>VISIÓN</strong>
+            </h1>
+            <p>
+              Ser considerados por nuestros clientes y partners como la opción más atractiva e innovadora para ofrecer
+              soluciones de movilidad adaptadas a sus necesidades en cada momento, asumiendo el reto permanente de
+              superar
+              siempre sus expectativas.
+              Ser el mejor lugar para trabajar, donde las personas disfruten de las mejores condiciones para sentirse
+              inspirados a dar la mejor versión de sí mismos con el ánimo de lograr desarrollar una empresa eficiente y
+              rentable que acepte y supere el desafío que supone competir y crecer internacionalmente.
+            </p>
+          </section>
+
+          <section class="col-3-mobile" role="button" tabindex=""
+            on="tap:AMP.setState({ Position2: Position2 == 'topPosition2' ? 'normalPostion' : 'topPosition2' })"
+            class="col-3-mobile" [class]="'col-3-mobile ' + Position2">
+            <h1>
+              <amp-img src="src/icones/icon-heart2.svg" width="80" height="80"></amp-img>
+              <strong>VALORES</strong>
+            </h1>
+            <p>
+              Somos honestos con nosotros mismos. La confianza, transparencia y coherencia forman parte de nuestros
+              principios.
+              Somos conscientes que la humildad y aprender algo nuevo cada día nos proporciona nuevas oportunidades de
+              éxito.
+              Somos nuestra mejor versión en todo momento. La superación constante en busca de la excelencia es nuestra
+              guía
+              para marcarnos nuevos retos.
+              Somos positivos y proactivos. Con la agilidad necesaria para adaptarnos al cambio.
+              Somos pasión y tenemos un secreto: amamos lo que hacemos.
+              Somos un equipo y apostamos por un entorno de colaboración fomentando el talento colectivo y el trabajo en
+              equipo.
+              Somos sensatos. Asumimos con responsabilidad los compromisos y aceptamos las consecuencias de nuestros
+              actos.
+              Somos fieles a nuestra empresa y a la sociedad. La lealtad nos caracteriza.
+              Somos esfuerzo. Con constancia y perseverancia convertimos cada problema en un desafío y en una nueva
+              oportunidad.
+            </p>
+          </section>
+        </div>
+      </div>
+      <!-- Fim container desktop -->
+
+      <!-- Inicio container mobile -->
+    </section>
+    <!-- Fim container mobile -->
+</body>
+
+</html>

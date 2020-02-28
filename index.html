@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html ⚡>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+
+  <title>Colwagen</title>
+  <link rel="shortcut icon" href="./src/icones/fav.png" />
+
+  <link rel="canonical" href="https://amp.dev/pt_br/documentation/guides-and-tutorials/start/create/basic_markup/" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet" />
+  <style amp-boilerplate>
+    body {
+      -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+    }
+
+    @-webkit-keyframes -amp-start {
+      from {
+        visibility: hidden;
+      }
+
+      to {
+        visibility: visible;
+      }
+    }
+
+    @-moz-keyframes -amp-start {
+      from {
+        visibility: hidden;
+      }
+
+      to {
+        visibility: visible;
+      }
+    }
+
+    @-ms-keyframes -amp-start {
+      from {
+        visibility: hidden;
+      }
+
+      to {
+        visibility: visible;
+      }
+    }
+
+    @-o-keyframes -amp-start {
+      from {
+        visibility: hidden;
+      }
+
+      to {
+        visibility: visible;
+      }
+    }
+
+    @keyframes -amp-start {
+      from {
+        visibility: hidden;
+      }
+
+      to {
+        visibility: visible;
+      }
+    }
+  </style>
+  <noscript>
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;eu troquei uma
+    </style>
+  </noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
+  <style amp-custom>
+    .body {
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .container-fluid {
+      width: 100%;
+      max-width: 100%;
+      padding: 0px 15px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+      max-width: 1170px;
+    }
+
+    .container-m30 {
+      width: 100%;
+      padding-right: 30px;
+      padding-left: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+    }
+
+    .bg-vw {
+      background-color: #0099dd;
+    }
+
+    .bg_colwagen {
+      background-color: #777;
+    }
+
+    .color_vw {
+      color: #009ada;
+    }
+
+    .color_audi {
+      color: #ce0031;
+    }
+
+    .bg_audi {
+      background-color: #ce0031;
+    }
+
+    .color_honda {
+      color: #5b5b5b;
+    }
+
+    .bg_honda {
+      background-color: #5b5b5b;
+    }
+
+    .color_hyundai {
+      color: #013368;
+    }
+
+    .bg_hyundai {
+      background-color: #013368;
+    }
+
+    .color_vw {
+      color: #009ada;
+    }
+
+    .bg_vw {
+      background-color: #009ada;
+    }
+
+    .p-15 {
+      padding: 15px 0;
+    }
+
+    .p-l-20 {
+      padding-left: 20px;
+    }
+
+    .w-20 {
+      width: 20%;
+    }
+
+    .w-50 {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .w-80 {
+      width: 80%;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .h-100 {
+      height: 100%;
+    }
+
+    .mb-15 {
+      margin-bottom: 15px;
+    }
+
+    .ml-5 {
+      margin-left: 5px;
+    }
+
+    .mr-10 {
+      margin-right: 10px;
+    }
+
+    .mr-15 {
+      margin-right: 15px;
+    }
+
+    .my-10 {
+      margin: 10px 0;
+    }
+
+    .mx-20 {
+      margin: 20px 0;
+    }
+
+    .padding-10 {
+      padding: 10px 0;
+    }
+
+    .padding-15 {
+      padding: 15px 0;
+    }
+
+    .section-banner {
+      height: 600px;
+    }
+
+    .menu-vertical {
+      width: 7%;
+    }
+
+    .nav-items-menu-vertical {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item-menu-vertical {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-black {
+      color: black;
+    }
+
+    .bg-light-gray {
+      background-color: #d9dbda;
+    }
+
+    .text-bold {
+      font-weight: bold;
+    }
+
+    .justify-content-space-between {
+      justify-content: space-between;
+    }
+
+    .flex-align-vertical {
+      display: flex;
+      align-items: center;
+    }
+
+    .flex-align-horizontal {
+      display: flex;
+    }
+
+    .flex-align-horizontal-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    a,
+    li {
+      text-decoration: none;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* INICIO CSS VW */
+    .car_vw {
+      background: url(src/imagens/HOME_Hyundai_mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .car_audi {
+      background: url(src/imagens/HOME_Audi_Mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .car_honda {
+      background: url() no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .car_hyundai {
+      background: url(./src/imagens/HOME_Hyundai_mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .car_vw {
+      background: url(./src/imagens/HOME_VW_Mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .color_audi {
+      color: #ce0031;
+    }
+
+    .bg_audi {
+      background-color: #ce0031;
+    }
+
+    .car_audi {
+      background: url(./src/imagens/HOME_Audi_Mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .color_honda {
+      color: #5b5b5b;
+    }
+
+    .bg_honda {
+      background-color: #5b5b5b;
+    }
+
+    .car_honda {
+      background: url(./src/imagens/HOME_Honda_mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    .color_hyundai {
+      color: #013368;
+    }
+
+    .bg_hyundai {
+      background-color: #013368;
+    }
+
+    .car_hyundai {
+      background: url(./src/imagens/HOME_Hyundai_mobile.png) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      display: flex;
+      flex: 1;
+    }
+
+    /* INICIO CSS HEADER MOBILE */
+    .colwagen_redes {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+    }
+
+    .header {
+      display: flex;
+      flex-flow: row nowrap;
+      position: relative;
+      box-shadow: 0 5px 10px #c0c0c0;
+    }
+
+    .header_link {
+      color: #fff;
+      font-size: 14px;
+      margin-left: 15px;
+      padding: 10px 0;
+      display: flex;
+    align-items: center;
+    }
+
+    .header_link:hover {
+      text-decoration: underline;
+    }
+
+    .background-header-white {
+      padding: 5px 0;
+      background-color: white;
+    }
+
+    .border-bottom {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .header_sections__div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header_menu {
+      display: flex;
+      flex-direction: flex-end;
+    }
+
+    .header_article_logo figure {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .button_menu {
+      width: 40px;
+      border: none;
+      color: #fff;
+      background: transparent;
+      font-size: 28px;
+    }
+
+    .header__sub-menu {
+      position: absolute;
+      background: #fff;
+      top: 0px;
+      width: 100%;
+      margin: 0px;
+      padding-top: 30px;
+    }
+
+    .header__sub-menu-mobile-vw {
+      position: relative;
+      top: 6px;
+    }
+
+    .header__sub-menu-vw {
+      position: absolute;
+      background: #fff;
+      top: 0px;
+      width: 100%;
+      margin: 0px;
+      padding: 70px 0 0 0;
+    }
+
+    .header__sub-menu .item-menu {
+      padding: 5px;
+    }
+    body > section.bg_colwagen > header > div > a > amp-img{
+      margin: 0;
+    }
+    body > section.bg_colwagen > header > div > a > amp-img > img {
+    transform: rotateZ(270deg);
+    margin: 0;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    margin: 0px;
+}
+
+    .nav-items {
+      height: 40px;
+    }
+
+    .nav-item li {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-items>li:nth-child(1)>.nav-link:after {
+      margin-left: 15px;
+    }
+
+    .nav-link:after {
+      content: "";
+      border-right: 1px solid white;
+      margin: 0 20px;
+    }
+
+    .amp-lightbox {
+      position: absolute;
+    }
+
+    .btn-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: transparent;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #444;
+    }
+
+    .btn-close-vw {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: transparent;
+    }
+
+    .header__logo-img {
+      margin: 15px;
+    }
+
+    .header__logo figure {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: center;
+      flex-flow: row;
+    }
+
+    /* Inicio custom main */
+    .container.main {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .block_main {
+      width: 100%;
+      height: 145px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .container-figures {
+      max-width: 80%;
+      height: 80%;
+    }
+
+    .block_link {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .block_main_brand {
+      height: 100%;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .block_main__figure {
+      margin: 0;
+    }
+
+    .block_main__figure {
+      margin: 0;
+    }
+
+    .desk-d-none {
+      display: none;
+    }
+
+    .logo-vw {
+      width: 70px;
+      height: 70px;
+      background: url(./src/logos/logo-vw.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .logo-audi {
+      width: 90px;
+      height: 90px;
+      background: url(./src/logos/logo-audi.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .logo-honda {
+      width: 90px;
+      height: 90px;
+      background: url(./src/logos/logo-honda2.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .logo-hyundai {
+      width: 90px;
+      height: 90px;
+      background: url(./src/logos/logo-hyundai.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .block_main:hover .logo-vw {
+      background: url(./src/logos/logo-vw.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .block_main:hover .logo-audi {
+      background: url(./src/logos/Logo_Audi_PB.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .block_main:hover .logo-honda {
+      background: url(./src/logos/Logo-Honda_PB.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    .block_main:hover .logo-hyundai {
+      background: url(./src/logos/newlogoHyundai.png) no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+
+    @media (min-width: 1024px) {
+      .header_article_logo figure {
+        justify-content: flex-start;
+        max-height: 100px;
+        overflow: hidden;
+      }
+
+      .container.main {
+        display: flex;
+        height: calc(100vh - 140px);
+      }
+
+      article.main_article {
+        flex: 1;
+      }
+
+      .block_link {
+        height: 100%;
+      }
+
+      article .block_main {
+        flex-direction: column-reverse;
+        height: 100%;
+      }
+
+      .car_vw {
+        background: url(./src/imagens/HOME_VW_desk.png) no-repeat;
+        background-position: center center;
+      }
+
+      .car_audi {
+        background: url(./src/imagens/HOME_Audi_desk.png) no-repeat;
+        background-position: center center;
+      }
+
+      .car_honda {
+        background: url(./src/imagens/HOME_Honda_desk.png) no-repeat;
+        background-position: center center;
+      }
+
+      .car_hyundai {
+        background: url(./src/imagens/HOME_Hyundai_Desk.png) no-repeat;
+        background-position: center center;
+      }
+
+      .car_vw,
+      .car_audi,
+      .car_honda,
+      .car_hyundai {
+        flex: 0;
+        transition: 1s ease;
+      }
+
+      .main_article:hover .car_honda,
+      .main_article:hover .car_hyundai,
+      .main_article:hover .car_audi,
+      .main_article:hover .car_vw {
+        flex: 1;
+      }
+
+      /* Modificações do background */
+      .bg_vw {
+        background-color: #f3f3f3;
+      }
+
+      .main_article .block_main:hover .bg_vw {
+        background-color: #009ada;
+      }
+
+      .bg_audi {
+        background-color: #e1e1e1;
+      }
+
+      .main_article .block_main:hover .bg_audi {
+        background-color: #ce0031;
+      }
+
+      .bg_honda {
+        background-color: #f3f3f3;
+      }
+
+      .main_article .block_main:hover .bg_honda {
+        background-color: #b5000a;
+      }
+
+      .bg_hyundai {
+        background-color: #e1e1e1;
+      }
+
+      .main_article .block_main:hover .bg_hyundai {
+        background-color: #013368;
+      }
+
+
+      .hyundai_logo {
+        width: 160px;
+        height: 80px;
+      }
+    }
+
+    .list_icones {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+    }
+
+    .list_icones .nav-icon {
+      padding-right: 5px;
+    }
+
+    .nav-icon {
+      height: 20px;
+    }
+
+    header>div>ul>li>a {
+      color: #fff;
+      font-size: 12px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+
+
+    @media (min-width: 768px) {
+      .desk-d-none {
+        display: none;
+      }
+
+      .block_main {
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .block_main__figure amp-img {
+        width: 30px;
+      }
+
+      .block_main_brand.bg_hyundai .block_main_figure .hyundai_logo {
+        width: 158px;
+        height: 41px;
+      }
+    }
+
+    @media (max-width: 968px) {
+      article:nth-child(odd) .block_main {
+        flex-direction: row-reverse;
+      }
+
+      .header {
+        box-shadow: none;
+      }
+
+      .logo-vw {
+        background: url(./src/logos/Logo_vw_PB.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      .logo-audi {
+        background: url(./src/logos/Logo_Audi_PB.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      .logo-honda {
+        background: url(./src/logos/Logo-Honda_PB.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+
+      .logo-hyundai {
+        background: url(./src/logos/newlogoHyundai.png) no-repeat;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  </style>
+  <meta name="google-site-verification" content="Ma-g9okg1u1gedByf7RXrs67KN09B59iFeXtmmcS2i8" />
+</head>
+
+<body>
+  <!-- Menu deskop  -->
+  <section class="bg_colwagen ">
+    <header class="container-fluid colwagen_redes ">
+      <!-- inicio icones redes sociais -->
+      <div class="nav-item flex-align-vertical">
+
+        <a class="header_link" href="somos-colwagen.html">
+          <amp-img class="header__logo-img" src="./src/icones/icon-arrow.svg" width="30" height="30">
+          </amp-img>
+          #Somos<strong>Colwagen</strong>
+        </a>
+      </div>
+      <ul class=" list_icones">
+
+
+        <li class="nav-icon mr-5">
+          <a href="https://co.linkedin.com/company/colwagen" target="_blank">
+            <amp-img src="./src/icones/linkedin-button.svg" width="20" height="20"
+              class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout"
+              i-amphtml-layout="fixed" style="width: 20px; height: 20px; --loader-delay-offset:13ms !important;">
+              <img decoding="async" src="./src/icones/linkedin-button.svg"
+                class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+          </a>
+        </li>
+        <li class="nav-icon mr-5">
+          <a href="https://www.youtube.com/channel/UCLstJc6GdyPrsrI02MyOcUw/videos" target="_blank">
+            <amp-img src="./src/icones/icon-youtube.svg" width="20" height="20"
+              class="i-amphtml-element i-amphtml-layout-fixed i-amphtml-layout-size-defined i-amphtml-layout"
+              i-amphtml-layout="fixed" style="width: 20px; height: 20px; --loader-delay-offset:13ms !important;">
+              <img decoding="async" src="./src/icones/icon-youtube.svg"
+                class="i-amphtml-fill-content i-amphtml-replaced-content"></amp-img>
+          </a>
+        </li>
+      </ul>
+    </header>
+  </section>
+  <article class="w-100 header_article_logo p-l-20 desk-d-none">
+    <figure class="w-100">
+      <amp-img class="header__logo-img" src="./src/logos/Logo_colwagen.png" height="70">
+      </amp-img>
+    </figure>
+  </article>
+
+  <!-- Header desktop -->
+  <section class="background-header mob-d-none">
+    <header class="container-fluid header">
+      <div class="header_sections w-100">
+        <section class="header_sections__div">
+          <article class="w-100 header_article_logo">
+            <figure class="w-100">
+              <amp-img class="header__logo-img" src="./src/logos/Logo_colwagen.png" width="90" height="70">
+              </amp-img>
+            </figure>
+          </article>
+        </section>
+      </div>
+    </header>
+  </section>
+  <!-- Inicio main -->
+  <section class="container main">
+    <article class="main_article">
+      <a class="block_link" href="http://vw.colwagen.co/">
+        <div class="block_main">
+          <div class="block_main_brand bg_vw">
+            <div class="logo-vw"></div>
+          </div>
+
+          <div class="car_vw car_desk"></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="main_article">
+      <a class="block_link" href="http://audi.colwagen.co">
+        <div class="block_main">
+          <div class="block_main_brand bg_audi">
+            <div class="logo-audi"></div>
+          </div>
+
+          <div class="car_audi car_desk"></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="main_article">
+      <a class="block_link" href="http://honda.colwagen.co">
+        <div class="block_main">
+          <div class="block_main_brand  bg_honda">
+            <div class="logo-honda"></div>
+          </div>
+
+          <div class="car_honda car_desk"></div>
+        </div>
+      </a>
+    </article>
+
+    <article class="main_article">
+      <a class="block_link" href="http://hyundai.colwagen.co ">
+        <div class="block_main">
+          <div class="block_main_brand">
+            <div class="block_main_brand bg_hyundai">
+              <div class="logo-hyundai"></div>
+            </div>
+          </div>
+
+          <div class="car_hyundai car_desk"></div>
+        </div>
+      </a>
+    </article>
+  </section>
+</body>
+
+</html>
